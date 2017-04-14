@@ -4,6 +4,8 @@
 
 I have being notified for serveral times of a mock implementation of Wechat Lucky Money algorithm. And I considered if the problem's complex as they explained. I found that the Lucky Money Algorithm can be simply implemented due to the following causes (I just talk about random amount type here). As for random size, there is no need to take care of the steady of the amount of money each people get. So we can split the whole money distribution process just consider the money each time a people gets.
 
+## Implementation ##
+
 Each time, the algorithm returns a number range from 0.01 to left_money - (left_count - 1) * 0.01. This guarantees the left user could at least get (￥/$)0.01. The code below is the implementation of this algorithm.
 
 ```c
