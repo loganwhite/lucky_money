@@ -30,7 +30,8 @@ left_count is how many people didn't draw the money
 */
 float lucky_money(float left_money, int left_count) {
 	int from, to;
-	from = 1 * left_count;
-	to = left_money * 100;
+	if (left_count == 1) return left_money;
+	from = 1;
+	to = left_money * 100 - (--left_count);
 	return random_number(from, to) / 100.0f;
 }
